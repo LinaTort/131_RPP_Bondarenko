@@ -11,9 +11,9 @@ namespace _131_RPP_Bondarenko
         static void Main(string[] args)
         {
             int x, y;
-            Console.WriteLine("Plese enter x");
+            Console.WriteLine("Please enter x");
             x = int.Parse(Console.ReadLine());
-            Console.WriteLine("Plese enter y");
+            Console.WriteLine("Please enter y");
             y = Convert.ToInt32(Console.ReadLine());
             int z = x + y;
             Console.WriteLine("the value of z = {0}", z);
@@ -46,11 +46,11 @@ namespace _131_RPP_Bondarenko
                         );
                 }
             }
-        takeAawey:
+            takeAway:
             Console.WriteLine("z-1={0}", z--);//!
             if (z > 0)
             {
-                goto takeAawey;//с постусловием
+                goto takeAway;//с постусловием
             }//??
             int j = z;//?
             do //!?+? постусловие
@@ -61,19 +61,24 @@ namespace _131_RPP_Bondarenko
 
             //предусловие
 
-        takeAawey1:
+            takeAway1:
             if (z > 0)
             {
                 Console.WriteLine("z-1={0}", z--);
-                goto takeAawey1;
+                goto takeAway1;
 
             }
             while (z > 0)
             {
-                Console.WriteLine("value z={0}",z--);
+                Console.WriteLine("value z={0}", z--);
 
             }
             
+            
+            for (int i = z; i > 0; i--)
+            {
+                Console.WriteLine("value z={0}", i);
+            }
             Console.ReadKey();
 
         }
