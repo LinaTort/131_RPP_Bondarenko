@@ -47,18 +47,35 @@ namespace _131_RPP_Bondarenko
                 }
             }
         takeAawey:
-            Console.WriteLine("z-1={0}", z--);
+            Console.WriteLine("z-1={0}", z--);//!
             if (z > 0)
             {
                 goto takeAawey;//с постусловием
-            }
-            int j = z;
-            do
+            }//??
+            int j = z;//?
+            do //!?+? постусловие
             {
                 Console.WriteLine(j--);
             }
             while (z > 0);
+
+            //предусловие
+
+        takeAawey1:
+            if (z > 0)
+            {
+                Console.WriteLine("z-1={0}", z--);
+                goto takeAawey1;
+
+            }
+            while (z > 0)
+            {
+                Console.WriteLine("value z={0}",z--);
+
+            }
+            
             Console.ReadKey();
+
         }
     }
 }
